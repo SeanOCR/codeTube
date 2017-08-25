@@ -23,6 +23,7 @@ export default class VideoResults extends React.Component {
 
     return  <div className="video-results">
               <FeaturedVideoContainer /> 
+              <hr/>
               <VideoListContainer />
             </div>;
   }

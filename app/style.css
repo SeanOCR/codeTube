@@ -6,15 +6,30 @@ body {
   margin: 0;
 }
 
+h3 {
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    width: 90%;
+}
+
 .banner-header {
   font-family: 'Pacifico', cursive;
-  width: 100%;
   background-color: #333;
   padding: 5px 10px;
   font-size: 36px;
   color: white; 
   box-shadow: -5px 4px 5px rgba(1,1,0,0.4);
   z-index: 1;
+  position: relative;
 }
 
 .app-container {
@@ -28,7 +43,9 @@ body {
   display: flex;
 }
 
+
 .category {
+  transition: margin-top 1s;
   background-color: #555;
   color: white;
   width: 100px;
@@ -39,12 +56,34 @@ body {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   margin-right: 1px;
+  margin-top: -20px;
+  height: 32px;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+.category:hover {
+  color: #639;
+}
+
+.category.hide {
+  margin-top: -40px;
+  pointer-events: none;
 }
 
 .category.selected {
   background-color: #639;
   color: white;
-  padding: 15px 20px;
+  margin-top: -10px;
+}
+
+.category.selected.hide {
+  margin-top: -20px;
+  pointer-events: auto;
+}
+
+.feature-container {
+
 }
 
 .video-list {
@@ -53,9 +92,33 @@ body {
 
 .video-results {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  align-items: center;
 }
 
-.feature-container {
- flex-grow: 2;
+.video-item {
+  display: flex;
+  padding: 15px;
+}
+
+.video-item:hover {
+  border-right: 10px solid #639;
+}
+
+.video-thumbnail {
+  width: 320px;
+  height: 180px;
+}
+
+.video-item-copies {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .video-thumbnail {
+    width: 160px;
+    height: 90px;
+  }
 }

@@ -3,6 +3,7 @@ import {CATEGORY_VALUES} from '../../shared/constants.js';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 import {VIDEOS_PER_PAGE} from '../../shared/constants.js';
+import Truncate from 'react-truncate';
 
 // #DEV_NOTE Code do this by hand by adding eventListeners on scroll and doing basic math,
 //           but do to time constraints and stability issues I'm going to use this helpful module
@@ -27,15 +28,20 @@ export default class VideoList extends React.Component {
       let video = this.props.videos.items[i];
       videos.push(
         <div className="video-item" key={video.id} onClick={() => this.videoClicked(video.id)}>
-          <img src={video.thumbnails.medium.url}></img>
-          {video.title}
-          {video.description}
+          <img className="video-thumbnail" src={video.thumbnails.medium.url}></img>
+          <div className="video-item-copies">
+            <h3 className="video-item-title">{video.title}</h3>
+            <Truncate lines={4} ellipsis="...">
+                {video.description}
+            </Truncate>
+          </div>
         </div>
       );
     }
     return videos;
   }
 
+            // <div className="video-item-description">{video.description}</div>
   nextPage() {
     this.props.onPageIncrease();
   }

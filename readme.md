@@ -38,7 +38,7 @@ I assumed that we wanted a server to grab our video resources, but incase I'm wr
 - utils.js: Only one function in here at the moment, formats youtube response for our client.
 You could move the api calls from server.js to app/video_service and the page will work without a server.
 ##What's up with these tabs?##
-Why are these tabs not checkboxes?  It was simply a design decision.  Checkboxes would allow you to mix multiple categories, I feel for simplification, as well as navigation, it is easier to present chocies in this format and helps to encapsalte core ideas (such as different programming languages).
+Why are these tabs not checkboxes?  It was simply a design decision.  Checkboxes would allow you to mix multiple categories, but I feel for simplification, as well as navigation, it is easier to present chocies in this format and it helps to encapsalte core ideas (such as different programming languages).
 
 #TODO#
 If I had more time here are the things I'd like to do:

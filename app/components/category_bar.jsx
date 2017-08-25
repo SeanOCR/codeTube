@@ -14,12 +14,21 @@ export default class CategoryBar extends React.Component {
   }
 
   render() {
-    let tabs = CATEGORY_VALUES.map((category) => {
+    let tabs = [];
+    if(this.props.selectedVideoId) {
+      tabs = CATEGORY_VALUES.map((category) => {
+          let classes = 'category' + (this.props.selectedCategory === category ? ' selected hide' : ' hide');
+          let label = this.props.selectedCategory === category ? 'BACK' : category.toUpperCase();
+          return <div className={classes} key={category} onClick={() => this.click(category)}>{label}</div>;
+      });    
+    }
+
+    tabs = tabs.length > 0 ? tabs : CATEGORY_VALUES.map((category) => {
         let classes = 'category' + (this.props.selectedCategory === category ? ' selected' : '');
         return <div className={classes} key={category} onClick={() => this.click(category)}>{category.toUpperCase()}</div>;
     });
-
-    return <div className="category-bar">
+    
+    return <div className='category-bar'>
              {tabs}
            </div>;
   }
@@ -28,7 +37,7 @@ export default class CategoryBar extends React.Component {
 function mapStateToProps(state) {
   return {
     selectedCategory: state.get('selectedCategory'),
-    
+    selectedVideoId: state.get('selectedVideoId')
   }
 }
 
