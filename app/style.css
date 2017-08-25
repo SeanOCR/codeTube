@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+body {
+  font-family: 'Exo 2';
+  color: #555;
+  margin: 0;
+}
+
+.banner-header {
+  font-family: 'Pacifico', cursive;
+  width: 100%;
+  background-color: #333;
+  padding: 5px 10px;
+  font-size: 36px;
+  color: white; 
+  box-shadow: -5px 4px 5px rgba(1,1,0,0.4);
+  z-index: 1;
+}
+
+.app-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-bar {
+  display: flex;
+}
+
+.category {
+  background-color: #555;
+  color: white;
+  width: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-right: 1px;
+}
+
+.category.selected {
+  background-color: #639;
+  color: white;
+  padding: 15px 20px;
+}
+
+.video-list {
+  overflow: auto;
+}
+
+.video-results {
+  display: flex;
+  flex-direction: column; 
+}
+
+.feature-container {
+ flex-grow: 2;
+}
