@@ -88,7 +88,26 @@ hr {
 }
 
 .feature-container {
+ position: relative;
+}
 
+.feature-copies {
+  position: absolute;
+  bottom:0px;
+  width: 300px;
+}
+
+
+.feature-copies div {
+  background-color: #555;
+  color: white;
+  margin: 10px -40px;
+  padding: 5px;
+}
+
+.feature-title {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .video-list {

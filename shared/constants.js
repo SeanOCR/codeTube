@@ -2,7 +2,7 @@ const CATEGORIES = {
   ALL: 'All',
   JAVASCRIPT: 'JavaScript',
   SCALA: 'Scala',
-  JAVA: 'Java'
+  PERL: 'Perl'
 };
 
 var CATEGORY_VALUES = (function() {

@@ -60,6 +60,10 @@ export default class FeaturedVideo extends React.Component {
     let video = this.props.videos.items[0];
     return <div ref="feature" className="feature-container" onClick={() => this.videoClicked(video.id)}>
              <img width="480px" height="360px" className="feature-thumbnail" src={video.thumbnails.high.url}></img>
+             <div className="feature-copies">
+               <div className="feature-title">{video.title}</div>
+               <div className="feature-description">{video.description}</div>
+             </div>
            </div>;
   }
 };
