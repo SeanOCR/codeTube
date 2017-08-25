@@ -48,8 +48,6 @@ If I had more time here are the things I'd like to do:
 4. Create a HOC for the different types of video items (featured, vs list item)
 5. Many Many Many style changes 0_0
 - Make youtube embed player play nice with flex boxes
-- Format video items so that title & description float right and replace word wrapping with ellipses
-- Have category bar slide in and out when playing a video
-- 
+- Improve responsivness via @media and some container changes
 
 
