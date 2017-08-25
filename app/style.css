@@ -82,6 +82,11 @@ hr {
   pointer-events: auto;
 }
 
+.feature-thumbnail {
+  width: 480px;
+  height: 360px;
+}
+
 .feature-container {
 
 }
@@ -94,6 +99,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
 }
 
 .video-item {
@@ -117,8 +123,14 @@ hr {
 }
 
 @media (max-width: 600px) {
-  .video-thumbnail {
-    width: 160px;
-    height: 90px;
+  .video-item {
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .feature-thumbnail {
+    width: 400px;
+    height: 300px;
   }
 }

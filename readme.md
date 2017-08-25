@@ -47,7 +47,6 @@ If I had more time here are the things I'd like to do:
 3. Add tests
 4. Create a HOC for the different types of video items (featured, vs list item)
 5. Many Many Many style changes 0_0
-- Make youtube embed player play nice with flex boxes
 - Improve responsivness via @media and some container changes
-
+- Add thumbnail placeholders to prevent snapping of contents as page loads
 

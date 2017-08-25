@@ -28,7 +28,7 @@ export default class VideoList extends React.Component {
       let video = this.props.videos.items[i];
       videos.push(
         <div className="video-item" key={video.id} onClick={() => this.videoClicked(video.id)}>
-          <img className="video-thumbnail" src={video.thumbnails.medium.url}></img>
+          <img width="320px" height="180px" className="video-thumbnail" src={video.thumbnails.medium.url}></img>
           <div className="video-item-copies">
             <h3 className="video-item-title">{video.title}</h3>
             <Truncate lines={4} ellipsis="...">
@@ -49,7 +49,7 @@ export default class VideoList extends React.Component {
   render() {
     return <InfiniteScroll
              className="video-list"
-             containerHeight="400px"
+             containerHeight="450px"
              elementIsScrollable={true}
              items={this.renderVideos()}
              loadMore={this.nextPage.bind(this)}
